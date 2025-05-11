@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <!-- <link rel="stylesheet" href="./src/index.css" /> -->
+    <!-- <script type="module" src="/packages/dragger/index.ts"></script> -->
+
+    <script type="module">
+      import { RxhuiDragger } from './lib/main.js';
+      console.log(111111, RxhuiDragger);
+    </script>
+  </head>
+  <body>
+    <div style="width: 100vw;height:100vh;background-color:rgb(139, 91, 91);">
+      <rxhui-dragger singlepage>
+        <div slot="left">
+          leftleftleftleftleftleftleftleftleftleft
+          <button id="btn">add</button>
+          <button id="btn1">delete</button>
+        </div>
+        <div slot="right">rightrightrightrightrightright</div>
+      </rxhui-dragger>
+    </div>
+
+    <script>
+      const dragger = document.querySelector('rxhui-dragger');
+        const btn1 = document.getElementById('btn');
+        const btn2 = document.getElementById('btn1');
+        btn1.addEventListener('click', () => {
+            dragger.setAttribute('singlepage', 'true');
+        });
+        btn2.addEventListener('click', () => {
+            dragger.removeAttribute('singlepage');
+        });
+    </script>
+  </body>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</html>
