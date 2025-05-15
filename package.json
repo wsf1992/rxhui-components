@@ -1,25 +1,32 @@
 {
   "name": "rxhui-web-components",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    },
     "./*": {
       "import": "./lib/*/index.mjs",
       "require": "./lib/*/index.cjs"
     }
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --config vite/vite.dev.config.js",
     "build": "tsc && vite build",
     "build:lib": "tsc && vite build --config vite/vite.lib.config.js",
     "preview": "vite preview"
   },
   "dependencies": {
-    "lit": "^3.2.1"
+    "lit": "^3.2.1",
+    "x-data-spreadsheet": "^1.1.9",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "glob": "^11.0.2",
+    "less": "^4.3.0",
     "typescript": "~5.7.2",
     "vite": "^6.3.1"
   }

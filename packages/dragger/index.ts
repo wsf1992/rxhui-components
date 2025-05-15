@@ -130,8 +130,13 @@ export class RxhuiDragger extends LitElement {
     static styles = [draggerStyles]
 
 }
+
+// Add this to ensure proper type definitions
 declare global {
     interface HTMLElementTagNameMap {
         'rxhui-dragger': RxhuiDragger
     }
 }
+
+// Export the class as default
+export default RxhuiDragger;
