@@ -17,7 +17,9 @@
     "dev": "vite --config vite/vite.dev.config.js",
     "build": "tsc && vite build",
     "build:lib": "tsc && vite build --config vite/vite.lib.config.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "lit": "^3.2.1",
@@ -25,8 +27,21 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.6",
+    "@storybook/addon-a11y": "^8.6.14",
+    "@storybook/addon-docs": "^8.6.14",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-links": "^8.6.14",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/experimental-addon-test": "^8.6.14",
+    "@storybook/test": "^8.6.14",
+    "@storybook/testing-library": "^0.2.1",
+    "@storybook/web-components": "^8.6.14",
+    "@storybook/web-components-vite": "^8.6.14",
     "glob": "^11.0.2",
     "less": "^4.3.0",
+    "storybook": "^8.6.14",
     "typescript": "~5.7.2",
     "vite": "^6.3.1",
     "vite-plugin-css-injected-by-js": "^3.5.2"
