@@ -3,7 +3,7 @@ import { customElement, property, query } from 'lit/decorators.js'
 import Spreadsheet from "x-data-spreadsheet";
 import * as XLSX from 'xlsx';
 // 如何引入 css 文件
-import { excelSheet } from './xspreadsheet.js'
+// import { excelSheet } from './xspreadsheet.js'
 
 // console.log('xspreadcss', xspreadcss)
 
@@ -81,7 +81,7 @@ export class RxhuiExcel extends LitElement {
         `
     }
 
-    static styles = [excelSheet]
+    // static styles = [excelSheet]
 
 }
 

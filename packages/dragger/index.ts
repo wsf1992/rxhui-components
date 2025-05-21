@@ -137,6 +137,3 @@ declare global {
         'rxhui-dragger': RxhuiDragger
     }
 }
-
-// Export the class as default
-export default RxhuiDragger;
