@@ -15,13 +15,22 @@ const config: StorybookConfig = {
     options: {}
   },
   docs: {
-    autodocs: "tag"
+    autodocs: true
   },
   staticDirs: ['../public'],
+  core: {
+    disableTelemetry: true
+  },
   viteFinal: async (config) => {
     return mergeConfig(config, {
       build: {
-        outDir: 'docs'
+        outDir: 'docs',
+        sourcemap: true
+      },
+      server: {
+        fs: {
+          strict: false
+        }
       }
     });
   }
