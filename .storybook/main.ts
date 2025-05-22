@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/web-components-vite";
+import { html } from "lit";
 import { mergeConfig } from 'vite';
 
 const config: StorybookConfig = {
@@ -21,10 +22,28 @@ const config: StorybookConfig = {
   viteFinal: async (config) => {
     return mergeConfig(config, {
       build: {
-        outDir: 'docs'
+        outDir: 'docs',
+        rollupOptions: {
+          input: {
+            main: './.storybook/preview.ts'
+          },
+          output: {
+            entryFileNames: 'assets/[name].[hash].js',
+            chunkFileNames: 'assets/[name].[hash].js',
+            assetFileNames: 'assets/[name].[hash].[ext]'
+          }
+        }
       }
     });
-  }
+  },
+  managerHead: (head) => `
+    ${head}
+    <base href="/">
+  `,
+  previewHead: (head) => `
+    ${head}
+    <base href="/">
+  `
 };
 
 export default config;
