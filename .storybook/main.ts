@@ -21,6 +21,7 @@ const config: StorybookConfig = {
   staticDirs: ['../public'],
   viteFinal: async (config) => {
     return mergeConfig(config, {
+      base: '/rxhui-components/',
       build: {
         outDir: 'docs',
         rollupOptions: {
@@ -33,11 +34,11 @@ const config: StorybookConfig = {
   },
   managerHead: (head) => `
     ${head}
-    <base href="/">
+    <base href="/rxhui-components/">
   `,
   previewHead: (head) => `
     ${head}
-    <base href="/">
+    <base href="/rxhui-components/">
   `
 };
 
