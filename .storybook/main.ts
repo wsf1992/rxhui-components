@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/web-components-vite";
+import { mergeConfig } from 'vite';
 
 const config: StorybookConfig = {
   stories: ["../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -15,6 +16,14 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag"
+  },
+  staticDirs: ['../public'],
+  viteFinal: async (config) => {
+    return mergeConfig(config, {
+      build: {
+        outDir: 'docs'
+      }
+    });
   }
 };
 
