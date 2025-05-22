@@ -1,4 +1,4 @@
-import{f as z,u as O,i as L,a as R,x as M}from"./lit-element.KFNN4zkg.js";/**
+import{f as z,u as O,i as L,a as R,x as M}from"./lit-element-KFNN4zkg.js";/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause

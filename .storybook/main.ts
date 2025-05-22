@@ -25,12 +25,7 @@ const config: StorybookConfig = {
         outDir: 'docs',
         rollupOptions: {
           input: {
-            main: './.storybook/preview.ts'
-          },
-          output: {
-            entryFileNames: 'assets/[name].[hash].js',
-            chunkFileNames: 'assets/[name].[hash].js',
-            assetFileNames: 'assets/[name].[hash].[ext]'
+            index: './.storybook/preview.ts'
           }
         }
       }
