@@ -93,7 +93,7 @@ import{f as z,u as O,i as L,a as R,x as M}from"./lit-element-KFNN4zkg.js";/**
                 <slot name="right"></slot>
                 </div>
             </div>
-            `}};f=new WeakMap;v=new WeakMap;m=new WeakMap;P=new WeakMap;y=new WeakMap;l.styles=[j];d([q({type:Boolean})],l.prototype,"singlePage",1);d([x("#divider")],l.prototype,"divider",1);d([x("#leftPanel")],l.prototype,"leftPanel",1);d([x("#rightPanel")],l.prototype,"rightPanel",1);d([x(".container")],l.prototype,"container",1);l=d([X("rxhui-dragger")],l);const I={title:"Components/RxhuiDragger",component:"rxhui-dragger",tags:["autodocs"],argTypes:{singlePage:{control:"boolean",description:"是否启用单页面模式",defaultValue:!1}},render:e=>M`
+            `}};f=new WeakMap;v=new WeakMap;m=new WeakMap;P=new WeakMap;y=new WeakMap;l.styles=[j];d([q({type:Boolean,attribute:"single-page"})],l.prototype,"singlePage",1);d([x("#divider")],l.prototype,"divider",1);d([x("#leftPanel")],l.prototype,"leftPanel",1);d([x("#rightPanel")],l.prototype,"rightPanel",1);d([x(".container")],l.prototype,"container",1);l=d([X("rxhui-dragger")],l);const I={title:"Components/RxhuiDragger",component:"rxhui-dragger",tags:["autodocs"],argTypes:{singlePage:{control:"boolean",description:"是否启用单页面模式",defaultValue:!1}},render:e=>M`
     <rxhui-dragger ?single-page=${e.singlePage}>
       <div slot="left" style="padding: 20px;">
         <h2>左侧面板</h2>
