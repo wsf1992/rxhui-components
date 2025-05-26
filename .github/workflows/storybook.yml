@@ -1,0 +1,32 @@
+name: Build and Deploy Storybook
+on:
+  push:
+    branches:
+      - main # 设置触发分支，你可以根据需要修改
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # 使用 Node.js 18 版本，可以根据你的项目需求调整
+
+      - name: Install Dependencies
+        run: npm install # 如果你使用 yarn，可以改成 yarn install
+        
+      - name: Build Storybook
+        run: npm run build-storybook # 构建 storybook，确保你的 package.json 中有这个命令
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # 部署到 gh-pages 分支
+          folder: storybook-static # Storybook 构建输出目录
+          clean: true # 清理旧文件 

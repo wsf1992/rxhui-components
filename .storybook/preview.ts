@@ -13,3 +13,5 @@ const preview: Preview = {
 };
 
 export default preview;
+
+export const base = process.env.NODE_ENV === 'production' ? '/rxhui-components/' : '/'; 

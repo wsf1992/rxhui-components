@@ -16,8 +16,7 @@ export class RxhuiDragger extends LitElement {
     private minWidth = 100; // 最小宽度
     private maxWidthPercent = 0.8; // 最大宽度百分比
 
-
-    @property({ type: Boolean })
+    @property({ type: Boolean, attribute: 'single-page' })
     accessor singlePage = false
 
 
