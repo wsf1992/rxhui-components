@@ -4,6 +4,12 @@ on:
     branches:
       - main # 设置触发分支，你可以根据需要修改
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -27,6 +33,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages # 部署到 gh-pages 分支
+          branch: main # 部署到 gh-pages 分支
           folder: docs # Storybook 构建输出目录
-          clean: true # 清理旧文件 
+          clean: true # 清理旧文件
+          token: ${{ secrets.TOKEN }} # 使用 GitHub 提供的 token 
