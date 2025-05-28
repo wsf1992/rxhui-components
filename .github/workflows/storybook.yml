@@ -30,6 +30,9 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook # 构建 storybook，确保你的 package.json 中有这个命令
 
+      - name: Create .nojekyll file
+        run: touch docs/.nojekyll # 在 docs 目录下创建 .nojekyll 文件
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
