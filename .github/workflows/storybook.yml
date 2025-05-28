@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # 使用 Node.js 18 版本，可以根据你的项目需求调整
+          node-version: '20' # 使用 Node.js 20 版本，可以根据你的项目需求调整
 
       - name: Install Dependencies
         run: npm install # 如果你使用 yarn，可以改成 yarn install

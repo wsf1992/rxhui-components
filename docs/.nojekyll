@@ -1,5 +1,0 @@
-# 在本地项目根目录执行
-touch .nojekyll
-git add .nojekyll
-git commit -m "Disable Jekyll"
-git push
