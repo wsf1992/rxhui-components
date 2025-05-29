@@ -9,32 +9,17 @@
     <!-- <script type="module" src="/packages/dragger/index.ts"></script> -->
 
     <script type="module">
-      import { RxhuiDragger } from './lib/dragger/index.mjs';
-      console.log(111111, RxhuiDragger);
+      import { RxhuiExcel } from './packages/excel/index.ts';
+      console.log(111111, RxhuiExcel);
     </script>
   </head>
   <body>
-    <div style="width: 100vw;height:100vh;background-color:rgb(139, 91, 91);">
-      <rxhui-dragger singlepage>
-        <div slot="left">
-          leftleftleftleftleftleftleftleftleftleft
-          <button id="btn">add</button>
-          <button id="btn1">delete</button>
-        </div>
-        <div slot="right">rightrightrightrightrightright</div>
-      </rxhui-dragger>
+    <div style="width: 100vw;height:100vh;background-color:#fff;">
+      <rxhui-excel file-url=""></rxhui-excel>
     </div>
 
     <script>
-      const dragger = document.querySelector('rxhui-dragger');
-        const btn1 = document.getElementById('btn');
-        const btn2 = document.getElementById('btn1');
-        btn1.addEventListener('click', () => {
-            dragger.setAttribute('singlepage', 'true');
-        });
-        btn2.addEventListener('click', () => {
-            dragger.removeAttribute('singlepage');
-        });
+
     </script>
   </body>
   <style>
