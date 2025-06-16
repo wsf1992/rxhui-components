@@ -1,31 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Lit + TS</title>
-    <!-- <link rel="stylesheet" href="./src/index.css" /> -->
-    <!-- <script type="module" src="/packages/dragger/index.ts"></script> -->
 
-    <script type="module">
-      import { RxhuiExcel } from './packages/excel/index.ts';
-      console.log(111111, RxhuiExcel);
-    </script>
-  </head>
-  <body>
-    <div style="width: 100vw;height:100vh;background-color:#fff;">
-      <rxhui-excel file-url=""></rxhui-excel>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + Lit + TS</title>
+  <!-- <link rel="stylesheet" href="./src/index.css" /> -->
+  <!-- <script type="module" src="/packages/dragger/index.ts"></script> -->
+  <link rel="stylesheet" href="./packages/excel/dist/css/luckysheet.css">
+  <link rel="stylesheet" href="./packages/excel/dist/plugins/css/pluginsCss.css">
+  <link rel="stylesheet" href="./packages/excel/dist/plugins/plugins.css">
+  <link rel="stylesheet" href="./packages/excel/dist/assets/iconfont/iconfont.css">
+  <script type="module">
+    import { RxhuiExcel } from './packages/excel/index.ts';
+    console.log(111111, RxhuiExcel);
+  </script>
+</head>
 
-    <script>
+<body>
+  <div style="width: 500px;height:500px;background-color:#fff;">
+    <rxhui-excel file-url="/dfs/file/group1/M00/A1/B3/CgAAcGguyZ-AIl9BAAAzXebC2Tc33.xlsx">
+      <div id="luckysheetContainer"></div>
+    </rxhui-excel>
+  </div>
 
-    </script>
-  </body>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-    }
-  </style>
+  <script>
+
+  </script>
+</body>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  #luckysheetContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+</style>
+
 </html>
