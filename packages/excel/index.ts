@@ -174,11 +174,6 @@ export class RxhuiExcel extends LitElement {
         }
     }
 
-    updated(changedProperties: Map<string, any>) {
-        if (changedProperties.has('fileUrl')) {
-            this._fetchDatafromUrl()
-        }
-    }
 
     render() {
         return html`
